@@ -266,3 +266,44 @@ SW1はその切り替えスイッチですので，高周波数領域では主�
 #### 必要部品(2024年5月16日時点)  
 	MLA-1の部品に加えて
 	トロイダルコア　FT23-43： たとえば共立エレショップ 1個176円　https://eleshop.jp/shop/g/gF9U121/
+
+ 
+## LNA
+
+今回作製したMLAは選択度が高く，受信時のSN比が良いので，プリアンプが有効だと思われます．  
+特に小さいループ長のMLAをSi4732改造UV-K5で使用する時に感度が少し不足気味だと感じることがありました．  
+そこで，Liイオン電池を内蔵した30MHz以下で作動するプリアンプを製作しました．  
+これを接続することで，6055kHzのラジオNIKKEIの受信強度が，1mループアンテナでS8の37dBuVだったのがS9+の47dBuVとなりました．  
+![alt text](images/LNA.png)  
+また，30cm同軸ケーブルループアンテナでも中波放送の受信が可能でした．  
+
+回路図は，
+![回路図pdfファイル](images/LNA_diagram.pdf)
+です．　　　
+
+![alt text](images/LNA_1.png)  
+基板(表)   
+
+![alt text](images/LNA_2.png)  
+基板(裏)   
+
+![alt text](images/LNA_3.png)  
+部品をつけた基板(表)   
+
+![alt text](images/LNA_4.png)  
+部品をつけた基板(裏)   
+	
+#### JLCPCB用のガーバーファイルは"LNA_gerber.zip"です．  
+
+#### 必要部品(2024年5月16日時点)  
+	BGA420： 1個　たとえば秋月電子 120円　https://akizukidenshi.com/catalog/g/g113865/
+	スライドスイッチ　IS-1245T-G： 1個　秋月電子 25円　https://akizukidenshi.com/catalog/g/g115368/
+	SMAコネクタ（エッジマウント）： 2個　たとえば秋月電子 150円　https://akizukidenshi.com/catalog/g/g116928/
+	マイクロインダクター22uH： たとえば秋月電子 10本70円　https://akizukidenshi.com/catalog/g/g103964/
+	マイクロインダクター2.2uH： たとえば秋月電子 10本70円　https://akizukidenshi.com/catalog/g/g115185/
+	(積層)セラミックコンデンサー5pF： 1個
+	(積層)セラミックコンデンサー2pF： 1個
+	積層セラミックコンデンサー103： 2個
+	積層セラミックコンデンサー104： 1個
+	Liイオン電池：例えば 502025 3.7V 200mAh Amazon 2個で1299円
+	Liイオン電池充電器：例えば AliExpress 1個40円 https://ja.aliexpress.com/item/1005006241591318.html 
